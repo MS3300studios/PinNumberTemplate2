@@ -12,11 +12,9 @@ namespace PinNumberTemplateCsharp
         }
 
         static void Pin()
-        {
-            int counter = 3;
-            for (int i = 0; i < 3; i++)
-            {
-                counter--;
+        {           
+            for (int i = 3; i > 0; i--)
+            {                
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Enter the PIN number: ");
                 string user_input = Console.ReadLine();
@@ -30,7 +28,7 @@ namespace PinNumberTemplateCsharp
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Incorrect Pin, try again.");
-                    Console.Write($"Attempts left: {counter}");
+                    Console.Write($"Attempts left: {i-1}");
                     Console.WriteLine("");
                 }
 
